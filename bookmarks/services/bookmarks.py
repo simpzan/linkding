@@ -235,6 +235,7 @@ def _merge_bookmark_data(from_bookmark: Bookmark, to_bookmark: Bookmark):
 
 
 def _update_website_metadata(bookmark: Bookmark):
+    return
     metadata = website_loader.load_website_metadata(bookmark.url)
     bookmark.website_title = metadata.title
     bookmark.website_description = metadata.description
