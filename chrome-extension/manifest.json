@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "linkding",
+    "description": "add bookmark to linkding",
+    "version": "1.0",
+    "permissions": ["activeTab", "storage"],
+    "options_page": "options.html",
+    "host_permissions": ["http://127.0.0.1:8000/*", "https://lnk.simpzan.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": "bookmark-it.png"
+    }
+  }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Test Extension Options</title>
+</head>
+
+<body>
+
+    <form class="form" on:submit|preventDefault={handleSubmit}>
+        <div class="form-group">
+            <label class="form-label" for="input-base-url">Base URL <span class="text-error">*</span></label>
+            <input class="form-input" type="text" id="input-base-url" placeholder="https://linkding.mydomain.com"
+                bind:value={baseUrl}>
+            <div class="form-input-hint">The base URL of your linkding installation, <b>without</b> the
+                <samp>/bookmark</samp>
+                path or a trailing slash
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="input-token">API Authentication Token <span
+                    class="text-error">*</span></label>
+            <input class="form-input" type="password" id="input-token" placeholder="Token" bind:value={token}>
+            <div class="form-input-hint">Used to authenticate against the linkding API. You can find this on your
+                linkding
+                settings page.
+            </div>
+        </div>
+    </form>
+
+    <div id="status"></div>
+    <button id="save">Save</button>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
